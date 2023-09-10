@@ -1,0 +1,11 @@
+<%= form_with model: @user, method: :post, local: true do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: 'Username', required: true %> <br/>
+  <%= f.label :email %>
+  <%= f.text_field :email, required: true %> <br/>
+  <%= f.label :password %>
+  <%= f.password_field :password, required: true %> <br/>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, required: true %> <br/>
+  <%= f.submit 'Create Account' %>
+<% end %>
