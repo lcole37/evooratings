@@ -1,0 +1,16 @@
+<h1 id="app_title"> EvooRatings </h1>
+<section id="user_creation">
+<% if session[:user_id] %>
+  <%= link_to "Logout", logout_path, method: :delete %>
+  <%= link_to "Logout", logout_path, method: :delete %>
+<% else %>
+  <%= button_to "Create New Account", new_user_path, method: :get %>
+  <%= button_to "Log in as Existing User", login_path, method: :get %>
+<% end %>
+
+</section>
+<% if session[:user_id] %>
+
+<%= link_to "My Favorites", users_favorites_path(@user), method: :get %>
+
+<% end %>
